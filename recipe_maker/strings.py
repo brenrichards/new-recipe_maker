@@ -1,6 +1,6 @@
-from all_the_math import math_functions
+from all_the_math import MathFunctions
 
-class parse_and_edit_strings:
+class ParseAndEditStrings:
     def recipe_parsing(list_of_ingredients, list_number):
         select = list_of_ingredients[list_number]
         split_ingredient = select.split(" ")
@@ -21,7 +21,7 @@ class parse_and_edit_strings:
         return final_string
 
     def main_loop_function(recipe_length, recipe_entered, recipe_multiplier, x):
-        parsed_components = parse_and_edit_strings.recipe_parsing(recipe_entered, x)
+        parsed_components = ParseAndEditStrings.recipe_parsing(recipe_entered, x)
         fraction_of_component = parsed_components[0]
         split_fraction = fraction_of_component.split("/")
         numerator = float(split_fraction[0])
@@ -30,8 +30,8 @@ class parse_and_edit_strings:
         except IndexError:
             denominator = 1
 
-        new_measurement_amount = math_functions.wacky_fraction_maker(numerator, denominator, recipe_multiplier)
+        new_measurement_amount = MathFunctions.wacky_fraction_maker(numerator, denominator, recipe_multiplier)
 
-        final_string = parse_and_edit_strings.final_ingredient_string_maker(parsed_components, new_measurement_amount)
+        final_string = ParseAndEditStrings.final_ingredient_string_maker(parsed_components, new_measurement_amount)
         
         return final_string

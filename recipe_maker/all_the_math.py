@@ -1,4 +1,4 @@
-class math_functions:
+class MathFunctions:
     def multiplier_definer(recipe_multiplier):
         if recipe_multiplier == 2:
             mult_string = "Recipe Doubled"

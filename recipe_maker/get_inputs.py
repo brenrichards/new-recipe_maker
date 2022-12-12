@@ -1,4 +1,4 @@
-class get_input_functions:
+class GetInputFunctions:
     def enter_ingredients():
         print(f"Please enter your first ingredient")
         print(f"Enter Ingredients in the form '1/2 cup flour' or '2 tbsp oil'")
